@@ -11,10 +11,13 @@ if (Astro.request.method === "POST") {
 
   if (typeof authorName === "string" && typeof content === "string") {
     // check if the author exists
-    let author = await db
+    const authors = await db
       .select()
       .from(Author)
       .where(eq(Author.name, authorName));
+
+    // insert form data into the Comment table with the authorId
+    // await db.insert(Comment).values({ authorId: authors[0].id, body: content });
   }
 }
 

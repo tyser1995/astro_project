@@ -2,7 +2,7 @@ import { db, Author, Comment } from "astro:db";
 
 // async function dropTables() {
 // 	await db.execute('DROP TABLE IF EXISTS comment');
-// 	await db.execute('DROP TABLE IF EXISTS authors');
+// 	await db.execute('DROP TABLE IF EXISTS author');
 //   }
   
 export default async function () {
