@@ -2,7 +2,6 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import { db, eq, Comment, Author } from "astro:db";
-import { sql } from 'drizzle-orm' 
 
 if (Astro.request.method === "POST") {
   // parse form data
@@ -18,7 +17,7 @@ if (Astro.request.method === "POST") {
       .where(eq(Author.name, authorName));
 
     // insert form data into the Comment table with the authorId
-    await db.insert(Comment).values({ authorId: authors[0].id, body: content });
+    // await db.insert(Comment).values({ authorId: authors[0].id, body: content });
   }
 }
 
