@@ -86,8 +86,8 @@ const comments = await db
         comments.map(({ Author, Comment }) => (
               <Card
               href="#!"
-              title={Author.name}
-              body={Comment.body}
+              title=`${Author.name}`
+              body=`${Comment.body}`
             />
         ))
       }
