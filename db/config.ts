@@ -11,9 +11,7 @@ const Author = defineTable({
 
 const Comment = defineTable({
   columns: {
-    authorId: column.number({
-      optional:true
-    }),
+    authorId: column.number({ references: () => Author.columns.id }),
     body: column.text({
       optional:true
     })
