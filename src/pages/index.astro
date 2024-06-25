@@ -28,7 +28,7 @@ if (Astro.request.method === "POST") {
     // }
 
     // insert form data into the Comment table with the authorId
-    await db.insert(Comment).values({ author, content });
+    // await db.insert(Comment).values({ authorId: authors[0].id, body: content });
   }
 }
 
